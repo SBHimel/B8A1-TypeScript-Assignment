@@ -42,14 +42,16 @@ const concatenateArrays = <T> (...arrays: T[][]): T[] =>{
 
 
 interface Course {
-    title: string;
-    students: number;
-    isPublished: boolean;
+  title: string;
+  students: number;
+  isPublished: boolean;
 }
-const getPopularCourses = (courses: Course[], minStudents: number): Course[] =>{
-    return courses.filter(
-    (course) => course.isPublished === true
-     && course.students >= minStudents
+function getPopularCourses(
+  courses: Course[],
+  minStudents: number
+): Course[] {
+  return courses.filter((course: Course): boolean =>
+      course.isPublished && course.students >= minStudents
   );
 }
 
@@ -57,11 +59,10 @@ const getPopularCourses = (courses: Course[], minStudents: number): Course[] =>{
 
 
 const pluckValues = <T, K extends keyof T>(
-    items: T[],
-     key: K
+  items: T[],
+   key: K
 ): T[K][] => {
-    return items.map((item) =>
-       item[key]);
+  return items.map((item: T): T[K] => item[key]);
 };
 
 
