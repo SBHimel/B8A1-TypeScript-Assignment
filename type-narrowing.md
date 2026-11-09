@@ -62,7 +62,7 @@ function showUserInfo(user: Admin | Subscriber): void {
 }
 ```
 
-Here, TypeScript checks whether the object has a name property.
+Here, TypeScript checks whether the object has a permissions property. It then narrows the type to Admin or Subscriber.
 
 ## Conclusion
 
