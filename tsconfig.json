@@ -1,0 +1,14 @@
+
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "./dist",
+    "module": "NodeNext",
+    "target": "ES2022",
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": ["solutions.ts"],
+  "exclude": ["node_modules", "dist"]
+}
